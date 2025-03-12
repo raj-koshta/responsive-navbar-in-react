@@ -1,42 +1,103 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p,li,a, button {
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+li {
+    list-style: none;
 }
 
-.card {
-  padding: 2em;
+a{
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+        color: #2e86c1;
+        text-decoration: underline;
+    }
 }
 
-.read-the-docs {
-  color: #888;
+
+header {
+    height: 5rem;
+    box-shadow: rgba(33, 35, 38, 0.1rem) 0px 10px 10px -10px;
+    background-color: #d4e6f1;
+    width: 100%;
+}
+
+.container {
+    max-width: 112rem;
+    margin: auto;
+    height: 5rem;
+}
+
+/* -------------------------------------------------------------- */
+
+/* -------------------------------------------------------------- */
+
+.grid {
+    display: grid;
+}
+
+.navbar-grid{
+    grid-template-columns: .5fr 1fr;
+    align-items: center;
+    height: 5rem;
+    padding: 0 3.6rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3.2rem;
+}
+
+.ham-menu {
+    display: none;
+}
+
+@media screen and (max-width: 998px){
+
+    .menu-web{
+        display: none;
+    }
+
+    .ham-menu {
+        display: inline-block;
+        text-align: end;
+    }
+
+    .menu-mobile{
+        position: absolute;
+        top: 5rem;
+        left: 0px;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px;
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & li:first-child {
+            margin-top: 1.2rem;
+        }
+
+        & li:last-child{
+            margin-bottom: 1.2rem;
+        }
+    }
 }
